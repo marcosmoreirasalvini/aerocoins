@@ -1,0 +1,40 @@
+.header {
+  background: white;
+  padding: 1rem 1.5rem;
+  @media #{$breakpoint-md-up} {
+    padding: 1rem 2.625rem;
+  }
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  &__brand {
+    width: 2.375rem;
+    padding-top: 6px;
+  }
+
+  .user {
+    align-self: end;
+
+    &__name {
+      padding-right: 1.125rem;
+      float: right;
+      letter-spacing: -0.15px;
+    }
+
+    &__points {
+      float: right;
+      background: $gray-200;
+      padding: 0 0.75rem 0 1rem;
+      border-radius: 1.5rem;
+
+      .coin {
+        padding-top: 0.5rem;
+        display: inline;
+      }
+    }
+  }
+}

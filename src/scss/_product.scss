@@ -1,0 +1,75 @@
+#product {
+  position: relative;
+  background: $primary;
+  min-height:100vh;
+
+  .main-product {
+    margin-top: 5rem;
+    background: $primary;
+    padding-top: 2rem;
+    @media #{$breakpoint-sm-up} {
+      padding-top: 4rem;
+    }
+    .row {
+      @media #{$breakpoint-sm-up} {
+        @include row-reverse();
+      }
+    }
+  }
+
+  h1 {
+    color: #fff;
+    padding-top: 3rem;
+  }
+
+  .description-content {
+    position: relative;
+  }
+
+  .description {
+    position: absolute;
+    @media #{$breakpoint-sm-up} {
+      padding-right: 1.5rem;
+    }
+  }
+
+  .image-container {
+    background: url('../assets/image-default.png') no-repeat center center $white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0px 10px 2.5rem 0px rgba(0, 0, 0, 0.2);
+    padding: 2rem 1.5rem;
+    min-height: 238px;
+    text-align: center;
+    @media #{$breakpoint-sm-up} {
+      padding: 4rem 1.5rem;
+    }
+    @media #{$breakpoint-md-up} {
+      min-height: 492px;
+    }
+    img {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+}
+
+// TRANSITIONS //
+.fadeUp-enter-active {
+  transition: all .5s ease;
+  ransform: translateY(0px);
+  transition-delay: 0.2s;
+}
+
+.fadeUp-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fadeUp-leave-to {
+  opacity: 0;
+}
+
+.fadeUp-leave {
+  opacity: 0;
+}
